@@ -37,7 +37,8 @@ Após puxar os arquivos "pyhton main_01.py"
 - Serialização (pickle)
 
 
-# Funções:
+# Funcionalidades:
 - Calcular área e volume de sólidos de revolução (Cilíndros, cones e esferas)
+  - Acessar o histórico dos ultimos 5 objetos criados
 - Calcular área e volume de prismas de base retangular e triangular
 - Calcular o Determinante, Transposta, Inversa, Cofatores, Adjunta e Matriz Escalonada
