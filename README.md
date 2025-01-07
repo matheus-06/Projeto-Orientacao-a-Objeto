@@ -27,12 +27,12 @@ Após puxar os arquivos "pyhton main_01.py"
 
 # Conceitos utilizados:
 - Classes
-- Encapsulamento
-- Herança (Prismas)
-- Polimorfismo (Prismas)
-- Métodos abstrato (Matriz, Prisma)
-- Classe abstrata (Matriz, Prisma)
-- Decoradores (Matriz)
+- Encapsulamento total
+- Herança 
+- Polimorfismo 
+- Métodos
+- Classe abstrata 
+- Decoradores
 - Controladores
 
 
