@@ -24,7 +24,7 @@ Após puxar os arquivos "pyhton main_01.py"
       - Digite todos os elementos da matriz (Separados por espaço)
     - Digite um numero de 2 a 7 para entrar um modo ou 1 para trocar a matriz que você usara (-1 para sair) 
   
-# Conceitos de orientação a objeto em uso:
+# Conceitos utilizados:
 - Classes
 - Encapsulamento
   - Parcial
@@ -34,3 +34,4 @@ Após puxar os arquivos "pyhton main_01.py"
 - Métodos abstrato (Matriz, Prisma)
 - Classe abstrata (Matriz, Prisma)
 - Decoradores (Matriz)
+- Controladores

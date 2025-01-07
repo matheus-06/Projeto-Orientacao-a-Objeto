@@ -1,7 +1,7 @@
 import numpy as np
 from abc import ABC, abstractmethod
 
-# Decorador para verificar se a matriz é quadrada
+# Decorador
 def requer_matriz_quadrada(func):
     def wrapper(self, *args, **kwargs):
         if self.linhas != self.colunas:
@@ -32,7 +32,7 @@ class Matriz(BaseMatriz):
         print("Digite os elementos da Matriz (Separe com espaço):")
         elementos = list(map(float, input().split()))
         
-        # Garantindo que o número de elementos corresponde ao tamanho da matriz
+        
         if len(elementos) != self.linhas * self.colunas:
             raise ValueError("O número de elementos não corresponde ao número de colunas.")
         
