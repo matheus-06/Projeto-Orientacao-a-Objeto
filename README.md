@@ -1,7 +1,7 @@
 # Projeto-Orienta-o-a-Objeto
 
 
-# Como rodar:  
+# Como usar:  
 Após puxar os arquivos "pyhton main_01.py"  
 - Menu de opções, Digite 1, 2 ou 3 para entrar nas funções Pismas, Sólidos de revolução ou Matrizes
   - **Prismas:**  
