@@ -32,4 +32,3 @@ Após puxar os arquivos "pyhton main_01.py"
 - Herança (Prismas)
 - Polimorfismo (Prismas)
 - Abstração (Prismas e solidos de revolução)
-  -Encapsulamento total (Solidos de revolução)
