@@ -34,6 +34,7 @@ Após puxar os arquivos "pyhton main_01.py"
 - Classe abstrata 
 - Decoradores
 - Controladores
+- Serialização (pickle)
 
 
 # Funções:

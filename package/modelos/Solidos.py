@@ -1,4 +1,5 @@
 import math
+import pickle
 
 # Classe Cilindro
 class Cilindro:
@@ -32,6 +33,25 @@ class Cilindro:
 
     def volume(self):
         return math.pi * self._raio**2 * self._altura
+    # Métodos para serializar e desserializar
+    def salvar(self, nome_arquivo):
+        try:
+            with open(nome_arquivo, 'wb') as f:
+                pickle.dump(self, f)
+            print(f"Cilindro salvo em {nome_arquivo}.")
+        except Exception as e:
+            print(f"Erro ao salvar o cilindro: {e}")
+
+    @staticmethod
+    def carregar(nome_arquivo):
+        try:
+            with open(nome_arquivo, 'rb') as f:
+                cilindro = pickle.load(f)
+            print(f"Cilindro carregado de {nome_arquivo}.")
+            return cilindro
+        except Exception as e:
+            print(f"Erro ao carregar o cilindro: {e}")
+            return None
 #___________________________________________________________________________
 # Classe Cone
 class Cone:
@@ -114,4 +134,4 @@ class Esfera:
         return 4 * math.pi * self.get_raio()**2
 
     def volume(self):
-        return (4 / 3) * math.pi * self.get_raio()**33
+        return (4 / 3) * math.pi * self.get_raio()**3

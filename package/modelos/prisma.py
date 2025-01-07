@@ -41,9 +41,15 @@ class BaseTriangular(Prisma):
         self.L2 = L2
         self.L3 = L3
 
-    def area_base(self):
-        s = (self.L1 + self.L2 + self.L3) / 2  # Semi-perímetro
-        return math.sqrt(s * (s - self.L1) * (s - self.L2) * (s - self.L3))
+    def teste_base_triangular(self):
+        if (self.L1 + self.L2 > self.L3) and (self.L1 + self.L3 > self.L2) and (self.L2 + self.L3 > self.L1):
+            return 1
+        else:
+            return -1        
 
+    def area_base(self):
+        s = (self.L1 + self.L2 + self.L3) / 2
+        return math.sqrt(s * (s - self.L1) * (s - self.L2) * (s - self.L3))
+       
     def area_lateral(self):
         return (self.L1 + self.L2 + self.L3) * self.H
