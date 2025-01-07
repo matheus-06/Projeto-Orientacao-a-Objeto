@@ -9,13 +9,13 @@ class ControladorMatrizes:
         # Aqui você pode implementar o menu ou as opções relacionadas ao controle das matrizes
         while True:
             print("Escolha a operação desejada:")
-            print("\t1: Ler Matriz")
-            print("\t2: Determinante")
-            print("\t3: Transposta")
-            print("\t4: Inversa")
-            print("\t5: Cofatores")
-            print("\t6: Adjunta")
-            print("\t7: Escalonada")
+            print("\t 1: Ler Matriz")
+            print("\t 2: Determinante")
+            print("\t 3: Transposta")
+            print("\t 4: Inversa")
+            print("\t 5: Cofatores")
+            print("\t 6: Adjunta")
+            print("\t 7: Escalonada")
             print("\t-1: Voltar")
 
             try:

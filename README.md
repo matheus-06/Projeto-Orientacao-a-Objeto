@@ -19,7 +19,10 @@ Após puxar os arquivos "pyhton main_01.py"
         - Digite o raio 
   - **Matrizes:**
     - Digite 1 para ler sua matriz
-      - Digite um numero de 2 a 7 para entrar um modo ou 1 para trocar a matriz que você usara (-1 para sair) 
+      - Digite o número de Linhas (Enter)
+      - Digite o número de Colunas (Enter)
+      - Digite todos os elementos da matriz (Separados por espaço)
+    - Digite um numero de 2 a 7 para entrar um modo ou 1 para trocar a matriz que você usara (-1 para sair) 
   
 # Conceitos de orientação a objeto em uso:
 - Classes
