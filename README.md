@@ -28,8 +28,6 @@ Após puxar os arquivos "pyhton main_01.py"
 # Conceitos utilizados:
 - Classes
 - Encapsulamento
-  - Parcial
-  - Total (Solidos de revolução)
 - Herança (Prismas)
 - Polimorfismo (Prismas)
 - Métodos abstrato (Matriz, Prisma)
