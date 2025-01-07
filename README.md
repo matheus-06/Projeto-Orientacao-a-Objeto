@@ -24,6 +24,7 @@ Após puxar os arquivos "pyhton main_01.py"
       - Digite todos os elementos da matriz (Separados por espaço)
     - Digite um numero de 2 a 7 para entrar um modo ou 1 para trocar a matriz que você usara (-1 para sair) 
   
+
 # Conceitos utilizados:
 - Classes
 - Encapsulamento
@@ -35,3 +36,9 @@ Após puxar os arquivos "pyhton main_01.py"
 - Classe abstrata (Matriz, Prisma)
 - Decoradores (Matriz)
 - Controladores
+
+
+# Funções:
+- Calcular área e volume de sólidos de revolução
+- Calcular área e volume de prismas de base retangular e triangular
+- Calcular o Determinante, Transposta, Inversa, Cofatores, Adjunta e matriz escalonada
