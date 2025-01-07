@@ -31,4 +31,6 @@ Após puxar os arquivos "pyhton main_01.py"
   - Total (Solidos de revolução)
 - Herança (Prismas)
 - Polimorfismo (Prismas)
-- Abstração (Prismas e solidos de revolução)
+- Métodos abstrato (Matriz, Prisma)
+- Classe abstrata (Matriz, Prisma)
+- Decoradores (Matriz)
