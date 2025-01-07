@@ -39,6 +39,6 @@ Após puxar os arquivos "pyhton main_01.py"
 
 
 # Funções:
-- Calcular área e volume de sólidos de revolução
+- Calcular área e volume de sólidos de revolução (Cilíndros, cones e esferas)
 - Calcular área e volume de prismas de base retangular e triangular
-- Calcular o Determinante, Transposta, Inversa, Cofatores, Adjunta e matriz escalonada
+- Calcular o Determinante, Transposta, Inversa, Cofatores, Adjunta e Matriz Escalonada
