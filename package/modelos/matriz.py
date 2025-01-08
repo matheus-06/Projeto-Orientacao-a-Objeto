@@ -5,9 +5,14 @@ from abc import ABC, abstractmethod
 def requer_matriz_quadrada(func):
     def wrapper(self, *args, **kwargs):
         if self.linhas != self.colunas:
-            raise ValueError("A matriz deve ser quadrada para realizar esta operação.")
+            raise ValueError("\033[31mA matriz deve ser quadrada para realizar esta operação.\033[0m")
         return func(self, *args, **kwargs)
     return wrapper
+
+def verificar_matriz_vazia(matriz):
+    # Verifica se a matriz é None ou se não tem elementos
+     if matriz.matriz is None or matriz.matriz.size == 0:
+        raise ValueError("\033[31mErro: A matriz está vazia.\033[0m")
 
 # Classe base abstrata
 class BaseMatriz(ABC):
@@ -27,14 +32,19 @@ class Matriz(BaseMatriz):
         self.matriz = None
 
     def ler_matriz(self):
-        self.linhas = int(input("Número de Linhas: "))
-        self.colunas = int(input("Número de Colunas: "))
+        while True:
+            self.linhas = int(input("Número de Linhas: "))
+            self.colunas = int(input("Número de Colunas: "))
+            if self.linhas <= 0 or self.colunas <= 0:
+                print("\033[31mO numero de colunas e linhas deve ser maior que zero\033[0m")
+            else:
+                break
         print("Digite os elementos da Matriz (Separe com espaço):")
         elementos = list(map(float, input().split()))
         
         
         if len(elementos) != self.linhas * self.colunas:
-            raise ValueError("O número de elementos não corresponde ao número de colunas.")
+            raise ValueError("\033[31mO número de elementos não corresponde ao número de colunas.\033[0m")
         
         self.matriz = np.array(elementos).reshape(self.linhas, self.colunas)
         self.exibir()
@@ -50,17 +60,22 @@ class Matriz(BaseMatriz):
         print(f"Determinante = {determinante:.2f}")
 
     def transposta(self):
-        matriz_transposta = self.matriz.T
-        print("Matriz Transposta:")
-        print(matriz_transposta)
-
+        try:
+            matriz_transposta = self.matriz.T
+            print("Matriz Transposta:")
+            print(matriz_transposta)
+        except AttributeError as e:
+            print(f"\033[31mErro: A operação de transposição falhou. {e}\033[0m")
+            print("\033[31mTente escrever a matriz novamente\033[0m")
+        except Exception as e:
+            print(f"Erro inesperado: {e}")
     def inversa(self):
         try:
             matriz_inversa = np.linalg.inv(self.matriz)
             print("Matriz Inversa:")
             print(matriz_inversa)
         except np.linalg.LinAlgError:
-            print("A matriz é singular ou não é quadrada, logo não possui inversa.")
+            print("\033[31mA matriz é singular ou não é quadrada, logo não possui inversa.\033[0m")
 
     @requer_matriz_quadrada
     def cofatores(self):

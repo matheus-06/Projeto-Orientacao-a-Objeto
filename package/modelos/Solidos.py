@@ -19,12 +19,12 @@ class Cilindro:
     # Setters
     def set_altura(self, altura):
         if altura <= 0:
-            raise ValueError("A altura deve ser maior que zero.")
+            raise ValueError("\033[31mA altura deve ser maior que zero.\033[0m")
         self._altura = altura
 
     def set_raio(self, raio):
         if raio <= 0:
-            raise ValueError("O raio deve ser maior que zero.")
+            raise ValueError("\033[31mO raio deve ser maior que zero.\033[0m")
         self._raio = raio
 
 
@@ -40,7 +40,7 @@ class Cilindro:
                 pickle.dump(self, f)
             print(f"Cilindro salvo em {nome_arquivo}.")
         except Exception as e:
-            print(f"Erro ao salvar o cilindro: {e}")
+            print(f"\033[31mErro ao salvar o cilindro: {e}\033[0m")
 
     @staticmethod
     def carregar(nome_arquivo):
@@ -50,7 +50,7 @@ class Cilindro:
             print(f"Cilindro carregado de {nome_arquivo}.")
             return cilindro
         except Exception as e:
-            print(f"Erro ao carregar o cilindro: {e}")
+            print(f"\033[31mErro ao carregar o cilindro: {e}\033[0m")
             return None
 #___________________________________________________________________________
 # Classe Cone
@@ -76,17 +76,17 @@ class Cone:
     # Setters-------------------------------------------------------
     def set_altura(self, altura):
         if altura < 0:
-            raise ValueError("A altura deve ser maior ou igual a zero.")
+            raise ValueError("\033[31mA altura deve ser maior que zero.\033[0m")
         self._altura = altura
 
     def set_raio(self, raio):
         if raio < 0:
-            raise ValueError("O raio deve ser maior ou igual a zero.")
+            raise ValueError("\033[31mO raio deve ser maior ou igual a zero.\033[0m")
         self._raio = raio
 
     def set_geratriz(self, geratriz):
         if geratriz < 0:
-            raise ValueError("A geratriz deve ser maior ou igual a zero.")
+            raise ValueError("\033[31mA geratriz deve ser maior ou igual a zero.\033[0m")
         self._geratriz = geratriz
     #-----------------------------------------------------------------
     def conferir(self):
@@ -99,10 +99,10 @@ class Cone:
 
     def conferir_existencia(self):
         if self.get_geratriz() <= self.get_altura() or self.get_geratriz() <= self.get_raio():
-            print("Este cone não existe, confira suas medidas!")
+            print("\033[31mEste cone não existe, confira suas medidas!\033[0m")
             return False
         if self.get_altura() <= 0 or self.get_geratriz() <= 0 or self.get_raio() <= 0:
-            print("Este cone não existe, confira suas medidas!")
+            print("\033[31mEste cone não existe, confira suas medidas!\033[0m")
             return False
         return True
 
@@ -127,7 +127,7 @@ class Esfera:
     # Setter
     def set_raio(self, raio):
         if raio <= 0:
-            raise ValueError("O raio deve ser maior que zero.")
+            raise ValueError("\033[31mO raio deve ser maior que zero.\033[0m")
         self._raio = raio
 
     def area(self):

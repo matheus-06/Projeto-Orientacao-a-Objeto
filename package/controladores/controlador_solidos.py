@@ -1,5 +1,8 @@
 from ..modelos.Solidos import Cilindro, Cone, Esfera
 import pickle
+import os
+import atexit
+
 class ControladorSolidos:
     def __init__(self):
         self.historico = []  # Lista para armazenar os últimos 5 sólidos
@@ -22,6 +25,7 @@ class ControladorSolidos:
             elif escolha == 4:
                 self.mostrar_historico()
             elif escolha == -1:
+                limpar_arquivos_pkl()
                 break
             else:
                 print("Opção inválida.")
@@ -36,7 +40,7 @@ class ControladorSolidos:
             print(f"Raio do cilindro: {cilindro.get_raio()}")
             print(f"Área: {cilindro.area():.2f}, Volume: {cilindro.volume():.2f}")
         except ValueError as e:
-            print(f"Erro: {e}")
+            print(f"\033[31mErro: {e}\033[0m")
 #---------------------------------------------------------
     def calcular_cone(self):
         try:
@@ -54,7 +58,7 @@ class ControladorSolidos:
                 print(f"Área: {cone.area():.2f}, Volume: {cone.volume():.2f}")
                 self.adicionar_historico(cone)
         except ValueError as e:
-            print(f"Erro: {e}")
+            print(f"\033[31mErro: {e}\033[0m")
 #---------------------------------------------------------
     def calcular_esfera(self):
         try:
@@ -66,7 +70,7 @@ class ControladorSolidos:
             print(f"Raio: {esfera.get_raio():.2f}")
             print(f"Área: {esfera.area():.2f}, Volume: {esfera.volume():.2f}")
         except ValueError as e:
-            print(f"Erro: {e}")
+            print(f"\033[31mErro: {e}\033[0m")
 #------------------------------------------------------------------------------------
     def adicionar_historico(self, solido):
         # Adiciona o sólido ao histórico e mantém apenas os 5 últimos
@@ -76,9 +80,9 @@ class ControladorSolidos:
     
     def mostrar_historico(self):
         if not self.historico:
-            print("Nenhum sólido foi calculado ainda.")
+            print("\033[31mNenhum sólido foi calculado ainda.\033[0m")
             return
-        print("\n*************************************")
+        print("\033[34m\n*************************************")
         print("=== HISTÓRICO DOS ÚLTIMOS SÓLIDOS ===\n")
         for index, solido in enumerate(self.historico, 1):
             print(f"Sólido {index}: {type(solido).__name__}")
@@ -89,6 +93,16 @@ class ControladorSolidos:
                 print(f"  Altura: {solido.get_altura()}, Raio: {solido.get_raio()}, Geratriz: {solido.get_geratriz()}")
             elif isinstance(solido, Esfera):
                 print(f"  Raio: {solido.get_raio()}")
-            print(f"Área: {solido.area():.2f}, Volume: {solido.volume():.2f}\n")
-        print("*************************************\n")
+            print(f"  Área: {solido.area():.2f}, Volume: {solido.volume():.2f}\n")
+        print("*************************************\n\033[0m")
 #-------------------------------------------------------------------------------------
+
+# Função para limpar arquivos .pkl
+def limpar_arquivos_pkl():
+    diretorio = os.getcwd()
+    for filename in os.listdir(diretorio):
+        if filename.endswith('.pkl'):
+            os.remove(os.path.join(diretorio, filename))
+            print(f"Arquivo {filename} removido.")
+# Registra a função para ser chamada quando o programa terminar
+atexit.register(limpar_arquivos_pkl)
