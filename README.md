@@ -4,7 +4,7 @@
   
 ## Como usar:  
 Após puxar os arquivos "pyhton main_01.py"  
-- Menu de opções, Digite 1, 2 ou 3 para entrar nas funções Pismas, Sólidos de revolução ou Matrizes
+- Menu de opções, Digite 1, 2 ou 3 para entrar nas funções Prismas, Sólidos de revolução ou Matrizes
   - **Prismas:**  
     - Prisma Retangular:
       - Entre os dados dos lados 1 e 2 da base e a altura (Separados por enter)
