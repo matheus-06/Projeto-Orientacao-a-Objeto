@@ -1,7 +1,8 @@
-# Projeto-Orienta-o-a-Objeto
-
-
-# Como usar:  
+# Projeto-Orienta-o-a-Objeto  
+  
+## Calculador multifuncional  
+  
+## Como usar:  
 Após puxar os arquivos "pyhton main_01.py"  
 - Menu de opções, Digite 1, 2 ou 3 para entrar nas funções Pismas, Sólidos de revolução ou Matrizes
   - **Prismas:**  
@@ -25,7 +26,7 @@ Após puxar os arquivos "pyhton main_01.py"
     - Digite um numero de 2 a 7 para entrar um modo ou 1 para trocar a matriz que você usara (-1 para sair) 
   
 
-# Conceitos utilizados:
+## Conceitos utilizados:
 - Classes
 - Encapsulamento total
 - Herança 
@@ -35,9 +36,10 @@ Após puxar os arquivos "pyhton main_01.py"
 - Decoradores
 - Controladores
 - Serialização (pickle)
+- Etc.
 
 
-# Funcionalidades:
+## Funcionalidades:
 - Calcular área e volume de sólidos de revolução (Cilíndros, cones e esferas)
   - Acessar o histórico dos ultimos 5 objetos criados
 - Calcular área e volume de prismas de base retangular e triangular
