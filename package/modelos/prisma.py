@@ -50,12 +50,12 @@ class BaseRetangular(Prisma):
     
     def set_L1(self, L1):
         if L1 <= 0:
-            raise ValueError("A altura deve ser maior que zero")
+            raise ValueError("O lado deve ser maior que zero")
         self._L1 = L1
     
     def set_L2(self, L2):
         if L2 <= 0:
-            raise ValueError("A altura deve ser maior que zero")
+            raise ValueError("O lado deve ser maior que zero")
         self._L2 = L2
 #-------------------------------------------------------
     def area_base(self):
@@ -75,6 +75,12 @@ class BaseTriangular(Prisma):
         self.set_L2(L2)
         self.set_L3(L3)
 #----------------------------------------------------------------
+    def teste_base_triangular(self):
+        if (self.get_L1() + self.get_L2() > self.get_L3()) and (self.get_L1() + self.get_L3() > self.get_L2()) and (self.get_L2() + self.get_L3() > self.get_L1()):
+            return 1
+        else:
+            return -1   
+#----------------------------------------------------------------------
     def get_L1(self):
         return self._L1 
         
@@ -94,14 +100,14 @@ class BaseTriangular(Prisma):
             raise ValueError("A altura deve ser maior que zero")
         self._L2 = L2
 
-    def set_L2(self, L3):
+    def set_L3(self, L3):
         if L3 <= 0:
             raise ValueError("A altura deve ser maior que zero")
         self._L3 = L3
 #--------------------------------------------------------------------
     def area_base(self):
-        s = (self.L1 + self.L2 + self.L3) / 2
-        return math.sqrt(s * (s - self.L1) * (s - self.L2) * (s - self.L3))
+        s = (self.get_L1() + self.get_L2() + self.get_L3()) / 2
+        return math.sqrt(s * (s - self.get_L1()) * (s - self.get_L2()) * (s - self.get_L3()))
        
     def area_lateral(self):
-        return (self.L1 + self.L2 + self.L3) * self.H
+        return (self.get_L1() + self.get_L2() + self.get_L3()) * self.H

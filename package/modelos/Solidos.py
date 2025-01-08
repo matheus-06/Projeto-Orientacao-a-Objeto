@@ -29,10 +29,10 @@ class Cilindro:
 
 
     def area(self):
-        return 2 * math.pi * self._raio * (self._raio + self._altura)
+        return 2 * math.pi * self.get_raio() * (self.get_raio() + self.get_altura())
 
     def volume(self):
-        return math.pi * self._raio**2 * self._altura
+        return math.pi * self.get_raio()**2 * self.get_altura()
     #--------------------------------------------------------------------
     # Métodos para serializar e desserializar
     def salvar(self, nome_arquivo):
