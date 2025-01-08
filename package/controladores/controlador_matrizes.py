@@ -1,11 +1,9 @@
 from ..modelos.matriz import Matriz, verificar_matriz_vazia
 class ControladorMatrizes:
     def __init__(self):
-        # Inicialização das variáveis da classe, como a classe Matriz
         self.matriz = Matriz()
 
     def executar(self):
-        # Aqui você pode implementar o menu ou as opções relacionadas ao controle das matrizes
         while True:
             print("Escolha a operação desejada:")
             print("\t 1: Ler Matriz")

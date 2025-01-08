@@ -4,7 +4,7 @@ from abc import ABC, abstractmethod
 # Classe Base para Prisma
 class Prisma(ABC):
     def __init__(self, H):
-        self.H = H  # Altura do prisma
+        self.H = H 
 
     @property
     def H(self):

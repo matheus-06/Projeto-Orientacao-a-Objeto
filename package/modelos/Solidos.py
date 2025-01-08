@@ -33,6 +33,7 @@ class Cilindro:
 
     def volume(self):
         return math.pi * self._raio**2 * self._altura
+    #--------------------------------------------------------------------
     # Métodos para serializar e desserializar
     def salvar(self, nome_arquivo):
         try:
@@ -107,7 +108,7 @@ class Cone:
         return True
 
     def area(self):
-        self.conferir()  # Verifica e calcula o valor faltante
+        self.conferir()
         return math.pi * self.get_raio() * (self.get_raio() + self.get_geratriz())
 
     def volume(self):
@@ -117,7 +118,7 @@ class Cone:
 # Classe Esfera
 class Esfera:
     def __init__(self, raio):
-        self._raio = None  # Atributo privado
+        self._raio = None  
         self.set_raio(raio)
 
     # Getter

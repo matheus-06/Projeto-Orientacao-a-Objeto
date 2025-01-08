@@ -5,7 +5,7 @@ import atexit
 
 class ControladorSolidos:
     def __init__(self):
-        self.historico = []  # Lista para armazenar os últimos 5 sólidos
+        self.historico = []  
     def executar(self):
         while True:
             print("\n=== CÁLCULO DE SÓLIDOS DE REVOLUÇÃO ===")
@@ -73,9 +73,8 @@ class ControladorSolidos:
             print(f"\033[31mErro: {e}\033[0m")
 #------------------------------------------------------------------------------------
     def adicionar_historico(self, solido):
-        # Adiciona o sólido ao histórico e mantém apenas os 5 últimos
         if len(self.historico) >= 5:
-            self.historico.pop(0)  # Remove o primeiro item se a lista tiver 5 itens
+            self.historico.pop(0)  
         self.historico.append(solido)
     
     def mostrar_historico(self):

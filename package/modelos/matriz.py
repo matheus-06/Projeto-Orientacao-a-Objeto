@@ -10,7 +10,6 @@ def requer_matriz_quadrada(func):
     return wrapper
 
 def verificar_matriz_vazia(matriz):
-    # Verifica se a matriz é None ou se não tem elementos
      if matriz.matriz is None or matriz.matriz.size == 0:
         raise ValueError("\033[31mErro: A matriz está vazia.\033[0m")
 
